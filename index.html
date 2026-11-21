@@ -2,17 +2,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-</head<link rel="stylesheet" href="style.css">>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+<meta name="description" content="NOVA — Exploring the future of technology, innovation and digital experiences.">
+<title>NOVA 2.0 | Beyond Technology</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d19;
+  color: #f5f7ff;
+  line-height: 1.6;
+}
+
+header {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #202b40;
+  background: #080d19;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #61c8ff;
+}
+
+nav a {
+  color: #c4cee0;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+nav a:hover { color: #61c8ff; }
+
+.hero {
+  min-height: 590px;
+  padding: 110px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 80% 45%, #123b68 0%, transparent 48%),
+    linear-gradient(135deg, #080d19, #101b31);
+}
+
+.tag {
+  color: #61c8ff;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 9vw, 85px);
+  line-height: 1.08;
+  max-width: 800px;
+}
+
+.hero h1 span { color: #61c8ff; }
+
+.hero p {
+  color: #aab8ce;
+  max-width: 550px;
+  margin: 25px 0;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  background: #168fe0;
+  color: white;
+  text-decoration: none;
+  padding: 13px 25px;
+  border-radius: 6px;
+  width: fit-content;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #61c8ff;
+  color: #080d19;
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 85px 8%;
+}
+
+.section-title {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.section-text {
+  color: #aab8ce;
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 28px;
+  background: #111c30;
+  border: 1px solid #263650;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #61c8ff;
+}
+
+.card .symbol {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #61c8ff;
+  margin-bottom: 10px;
+}
+
+.card p { color: #aab8ce; }
+
+.about {
+  background: #0d1627;
+}
+
+.about-content {
+  max-width: 750px;
+}
+
+.about-content p {
+  color: #aab8ce;
+  margin: 18px 0;
+}
+
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg, #102846, #0c1425);
+}
+
+.contact p {
+  color: #c0cde0;
+  margin: 15px auto 25px;
+  max-width: 550px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: #8392aa;
+  border-top: 1px solid #263650;
+  font-size: 13px;
+}
+
+@media(max-width: 600px) {
+  header { padding: 0 5%; }
+  nav a { margin-left: 10px; font-size: 12px; }
+  .logo { font-size: 23px; }
+  .hero { min-height: 520px; padding: 80px 7%; }
+  section { padding: 65px 7%; }
+}
+</style>
+</head>
+
 <body>
 
-    <h1>Welcome to My Website</h1>
+<header>
+  <div class="logo">NOVA.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <p>This is my first website.</p>
+<main>
 
-    <button>Click Me</button>
+<section class="hero" id="home">
+  <div class="tag">THE FUTURE STARTS HERE</div>
+  <h1>Think Beyond.<br><span>Explore NOVA.</span></h1>
+  <p>
+    Discover a new perspective on technology,
+    innovation and the digital future.
+    Welcome to NOVA 2.0.
+  </p>
+  <a class="btn" href="#about">Discover NOVA →</a>
+</section>
+
+<section id="about">
+  <h2 class="section-title">A New Era of Technology</h2>
+  <p class="section-text">
+    NOVA represents curiosity, creativity and the
+    endless possibilities of tomorrow.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="symbol">⚡</div>
+      <h3>Innovation</h3>
+      <p>Exploring fresh ideas and technologies that can shape tomorrow.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">◈</div>
+      <h3>Technology</h3>
+      <p>Discovering the digital tools transforming our world.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🚀</div>
+      <h3>Future</h3>
+      <p>Looking beyond today's limits towards new possibilities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-content">
+    <div class="tag">OUR VISION</div>
+    <h2 class="section-title">More Than Technology.</h2>
+    <p>
+      NOVA is a digital space built around exploration,
+      imagination and technological progress.
+    </p>
+    <p>
+      Our vision is to inspire people to think differently,
+      discover new possibilities and embrace the future.
+    </p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="tag">CONNECT WITH NOVA</div>
+  <h2 class="section-title">The Journey Begins.</h2>
+  <p>
+    The future is full of possibilities.
+    Be part of the journey.
+  </p>
+  <a class="btn" href="mailto:hello@nova.example">
+    Contact NOVA
+  </a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 NOVA 2.0. All rights reserved.
+  <br>Designed for the future.
+</footer>
 
 </body>
 </html>
